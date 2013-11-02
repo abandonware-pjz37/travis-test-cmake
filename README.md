@@ -1,4 +1,6 @@
-travis-test-cmake
-=================
-
-travis-ci.org test cmake
+* `linux` (**passed**: installed by default)
+[![Build Status](https://travis-ci.org/travis-ci-tester/travis-test-cmake.png?branch=linux)](https://travis-ci.org/travis-ci-tester/travis-test-cmake)
+* `mac.default` (**failed**: no cmake by default)
+[![Build Status](https://travis-ci.org/travis-ci-tester/travis-test-cmake.png?branch=mac.default)](https://travis-ci.org/travis-ci-tester/travis-test-cmake)
+* `mac.install` (**passed**: install with brew)
+[![Build Status](https://travis-ci.org/travis-ci-tester/travis-test-cmake.png?branch=mac.install)](https://travis-ci.org/travis-ci-tester/travis-test-cmake)
