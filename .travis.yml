@@ -3,3 +3,6 @@ language:
 
 script:
     - cmake --version
+    - mkdir _builds
+    - cd _builds
+    - cmake ..
