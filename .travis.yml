@@ -6,3 +6,10 @@ install:
 
 script:
     - cmake --version
+    - mkdir -p _builds/xcode
+    - mkdir -p _builds/make
+    - cd _builds/xcode
+    - cmake -GXcode ../..
+    - cd ../..
+    - cd _builds/make
+    - cmake ../..
