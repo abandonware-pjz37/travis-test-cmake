@@ -2,15 +2,21 @@ language:
     - cpp
 
 before_install:
-    - "wget https://launchpad.net/ubuntu/+source/cmake/2.8.8-2ubuntu1/+build/3441442/+files/cmake_2.8.8-2ubuntu1_amd64.deb"
-    - "wget https://launchpad.net/ubuntu/+archive/primary/+files/cmake-data_2.8.8-2ubuntu1_all.deb"
-    - "sudo apt-get remove cmake-data cmake"
+    - wget http://www.cmake.org/files/v2.8/cmake-2.8.10.tar.gz
+    - tar xf *.tar.gz
+    - cd cmake-*
+    - ./configure
+    - make
 
 install:
-    - "sudo dpkg --install cmake-data_2.8.8-2ubuntu1_all.deb cmake_2.8.8-2ubuntu1_amd64.deb" 
+    - sudo make install
+
+before_script:
+    - which cmake
+    - cmake --version
+    - cd ..
 
 script:
-    - cmake --version
     - mkdir _builds
     - cd _builds
     - cmake ..
