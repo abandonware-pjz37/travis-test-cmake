@@ -3,8 +3,8 @@ language:
 
 before_install:
     - wget http://www.cmake.org/files/v2.8/cmake-2.8.10.tar.gz
-    - tar xf *.tar.gz
-    - cd cmake-*
+    - tar xf cmake-2.8.10.tar.gz
+    - cd cmake-2.8.10
 
 install:
     - sudo apt-get install libcurl3-dev
